@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="buttons">
+        <button>Q Score</button>
+        <button>Remove Checker</button>
+        <button>Add Checker</button>
+        <button>Make King</button>
+        <button>New Game</button>
+        <button>V Score</button>
+    </div>
+    <div class="checkers-board">
+        <div class="square red"></div>
+        <div id="1" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="2" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="3" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="4" class="square blue">U</div>
+
+        <div id="5" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="6" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="7" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="8" class="square  blue">U</div>
+        <div class="square red"></div>
+
+        <div class="square red"></div>
+        <div id="9" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="10" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="11" class="square blue">U</div>
+        <div class="square red"></div>
+        <div id="12" class="square blue">U</div>
+
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+        <div class="square red"></div>
+        <div id="mid-board-blues" class="square blue"></div>
+
+        <div id="13" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="14" id="1" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="15" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="16" class="square blue">J</div>
+        <div class="square red"></div>
+
+        <div class="square red"></div>
+        <div id="17" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="18" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="19" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="20" class="square blue">J</div>
+
+        <div id="21" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="22" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="23" class="square blue">J</div>
+        <div class="square red"></div>
+        <div id="24" class="square blue">J</div>
+        <div class="square red"></div>
+    </div>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            background: cornflowerblue;
+        }
+
+        .checkers-board {
+            display: grid;
+            height: 90vh;
+            width: 60vw;
+            grid-template-columns: repeat(8, minmax(5px, 2000px));
+            grid-template-rows: repeat(8, minmax(5px, 2000px));
+            background: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .square {
+            border: 1px solid black;
+            font-size: 3em;
+            text-align: center;
+            rotate: 180deg;
+        }
+
+        .blue {
+            background: rgb(0, 47, 255);
+        }
+
+        .red {
+            background: rgb(255, 25, 0);
+        }
+
+        button {
+            font-size: 40px;
+            border: 2px solid rgb(77, 72, 72);
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+    <script src="./script2.js"></script>
+
+</body>
+
+</html>
