@@ -1,3 +1,13 @@
+// TODO -- Add different colors for each team. Add different color board and player option button.
+// Add scoring functionality. Fix score buttons names. They still say Q and V
+// Fix king so that color will stay with piece when it moves.
+// Add media queries for smaller devices.
+// Simplify code and look for reused code that can be made into its own function.
+// Are all of the functions for 'clickedCells' necessary?
+// Consider renaming cellsData and clickedCells to positionData or playerPos. Would it make sense?
+// kind of but kind of not too. using 'cells' may be more suitable considering what the functions do
+// split into modules
+
 const cells = [...document.querySelectorAll('.square')];
 const buttons = document.querySelectorAll('button');
 // checkboar cells(squares) data
@@ -18,11 +28,11 @@ function cellsData() {
   function initialize() {
     cells.forEach((cell) => {
       if (cell.id >= 1 && cell.id <= 12 && cell.classList.contains('blue')) {
-        cell.innerText = 'U';
+        cell.innerText = '2';
       }
 
       if (cell.id <= 24 && cell.id >= 13 && cell.classList.contains('blue')) {
-        cell.innerText = 'J';
+        cell.innerText = 'Y';
       }
 
       if (cell.id === 'mid-board-blues') {
@@ -35,9 +45,9 @@ function cellsData() {
 
   function toggleCell() {
     if (!clickedCells[0]) return;
-    if (clickedCells[0].innerText === '') return clickedCells[0].innerText = 'U';
-    if (clickedCells[0].innerText === 'U') return clickedCells[0].innerText = 'J';
-    if (clickedCells[0].innerText === 'J') return clickedCells[0].innerText = 'U';
+    if (clickedCells[0].innerText === '') return clickedCells[0].innerText = '2';
+    if (clickedCells[0].innerText === '2') return clickedCells[0].innerText = 'Y';
+    if (clickedCells[0].innerText === 'Y') return clickedCells[0].innerText = '2';
   }
 
   function getCells() {
