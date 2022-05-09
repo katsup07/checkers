@@ -6,7 +6,7 @@
 // Are all of the functions for 'clickedCells' necessary?
 // Consider renaming cellsData and clickedCells to positionData or playerPos. Would it make sense?
 // kind of but kind of not too. using 'cells' may be more suitable considering what the functions do
-// split into modules
+// split into modules.
 
 const cells = [...document.querySelectorAll('.square')];
 const buttons = document.querySelectorAll('button');
