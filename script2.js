@@ -124,7 +124,7 @@ function resetBoard() {
   clearHightlightedCells();
 }
 
-function makeKing() {
+/* function makeKing() {
   if (!playerCells.getCells()[0]) return;
   const el = playerCells.getCells()[0];
   el.style.color = 'yellow';
@@ -132,11 +132,13 @@ function makeKing() {
   el.style.fontSize = '3.0em';
   playerCells.clearCells();
   clearHightlightedCells();
-}
+} */
+
+
 function buttonClickHandler(event) {
   if (this.innerText === 'Remove Checker') removeChecker();
   if (this.innerText === 'Add Checker') addChecker();
-  if (this.innerText === 'Make King') makeKing();
+  /* if (this.innerText === 'Make King') makeKing(); */
   if (this.innerText === 'New Game') resetBoard();
   clearHightlightedCells();
 }
