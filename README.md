@@ -6,6 +6,6 @@ Note: Some functionality has yet to be finished.
 ## Try it out here:
 https://katsup07.github.io/checkers/
 
-## Alternatively
-Installation: download zip file, open in VS code, download live server extension, and then run with live server extension from index.html.
+## Install locally for development:
+Download zip file, open in VS code, download live server extension, and then run with live server extension from index.html.
 
