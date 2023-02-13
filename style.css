@@ -1,0 +1,112 @@
+html{
+  font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: rgb(37, 37, 37);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.checkers-board {
+    display: grid;
+    height: 90vh;
+    width: 60%;
+    grid-template-columns: repeat(8, minmax(0.1rem, 20rem));
+    grid-template-rows: repeat(8, minmax(0.1rem, 20rem));
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.square {
+    border: 1px solid black;
+    font-size: 3rem;
+    text-align: center;
+    rotate: 180deg;
+}
+
+.blue {
+    background: rgb(58, 123, 235);
+}
+
+.red {
+    background: rgb(202, 87, 74);
+}
+
+button {
+    font-size: 1rem;
+    border: 2px solid rgb(77, 72, 72);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.3rem 1rem;
+    margin: 0 1rem;
+}
+
+button:hover{
+  background-color: dodgerblue;
+  color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px;
+}
+
+@media all and (max-width: 1500px) {
+  html{
+    font-size: 0.9rem;
+  }
+
+  .checkers-board {
+        height: 80vh;
+        width: 70%;
+    }
+
+  button {
+        font-size: 1rem;
+        border: 2px solid rgb(77, 72, 72);
+    }
+}
+@media all and (max-width: 900px) {
+  html{
+    font-size: 0.7rem;
+  }
+
+  .checkers-board {
+        height: 80vh;
+        width: 70%;
+    }
+
+    button {
+      font-size: 0.8rem;
+      border: 2px solid rgb(77, 72, 72);
+  }
+}
+@media all and (max-width: 600px) {
+  html{
+    font-size: 0.5rem;
+  }
+
+  .checkers-board {
+        height: 50vh;
+        width: 70%;
+    }
+
+    button {
+      font-size: 0.5rem;
+      border: 2px solid rgb(77, 72, 72);
+  }
+
+}
