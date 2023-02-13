@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <div class="buttons">
-        <button>Snakes Score</button>
         <button>Remove Checker</button>
         <button>Add Checker</button>
-        <button>Make King</button>
         <button>New Game</button>
-        <button>People Score</button>
     </div>
     <div class="container">
         <div class="checkers-board">
@@ -92,81 +90,6 @@
             <div class="square red"></div>
         </div>
     </div>
-    <style>
-        body {
-            display: flex;
-            height: 100vh;
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            background: cornflowerblue;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .checkers-board {
-            display: grid;
-            height: 90vh;
-            width: 60%;
-            grid-template-columns: repeat(8, minmax(5px, 2000px));
-            grid-template-rows: repeat(8, minmax(5px, 2000px));
-            background: rgb(255, 255, 255);
-            border: 1px solid rgb(0, 0, 0);
-        }
-
-        .square {
-            border: 1px solid black;
-            font-size: 3em;
-            text-align: center;
-            rotate: 180deg;
-        }
-
-        .blue {
-            background: rgb(0, 47, 255);
-        }
-
-        .red {
-            background: rgb(255, 25, 0);
-        }
-
-        button {
-            font-size: 40px;
-            border: 2px solid rgb(77, 72, 72);
-        }
-
-        .buttons {
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-            margin: 10px;
-        }
-
-        @media all and (max-width: 1000px) {
-            body {
-                margin: 0;
-                height: 100vh;
-            }
-
-            .checkers-board {
-                height: 80vh;
-                width: 40%;
-            }
-
-            .square {
-                font-size: 1.3em;
-            }
-
-            button {
-                font-size: 10px;
-                border: 2px solid rgb(77, 72, 72);
-            }
-        }
-    </style>
     <script src="./script2.js"></script>
 
 </body>
