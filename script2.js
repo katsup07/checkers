@@ -80,23 +80,23 @@ function cellsData() {
 }
 
 function checkForLegalMove() {
-  const cell0Background = window.getComputedStyle(playerCells.getCells()[0]).getPropertyValue('background-color');
-  const cell1Background = window.getComputedStyle(playerCells.getCells()[1]).getPropertyValue('background-color');
-  if (playerCells.getCells().length === 2
-    && !playerCells.getCells()[1].textContent
+  const cell0Background = window.getComputedStyle(CellsDataMethods.getCells()[0]).getPropertyValue('background-color');
+  const cell1Background = window.getComputedStyle(CellsDataMethods.getCells()[1]).getPropertyValue('background-color');
+  if (CellsDataMethods.getCells().length === 2
+    && !CellsDataMethods.getCells()[1].textContent
     && cell0Background === cell1Background) { // ensures only moving on blue cells
-    return playerCells.getCells();
+    return CellsDataMethods.getCells();
   }
   // else
   return null;
 }
 
 function makeMove() {
-  playerCells.swapCells0and1();
+  CellsDataMethods.swapCells0and1();
 }
 
 function displayMoves() {
-  playerCells.displayCells0and1OnBoard();
+  CellsDataMethods.displayCells0and1OnBoard();
 }
 
 function highlightCell(el) {
@@ -108,19 +108,19 @@ function clearHightlightedCells() {
 }
 
 function removeChecker() {
-  playerCells.clearCell0();
-  playerCells.clearCells();
+  CellsDataMethods.clearCell0();
+  CellsDataMethods.clearCells();
 }
 
 function addChecker() {
-  playerCells.toggleCell();
-  playerCells.clearCells();
+  CellsDataMethods.toggleCell();
+  CellsDataMethods.clearCells();
   clearHightlightedCells();
 }
 
 function resetBoard() {
-  playerCells.initialize();
-  playerCells.clearCells();
+  CellsDataMethods.initialize();
+  CellsDataMethods.clearCells();
   clearHightlightedCells();
 }
 
@@ -146,22 +146,22 @@ function buttonClickHandler(event) {
 function boardClickHandler() {
   console.log(this);
   highlightCell(this);// put white border on clicked cell
-  playerCells.addCells(this);// adds the cells player clicked on
-  console.log(playerCells.getCells());
-  if (playerCells.getCells().length < 2) return;// only checks after second click
+  CellsDataMethods.addCells(this);// adds the cells player clicked on
+  console.log(CellsDataMethods.getCells());
+  if (CellsDataMethods.getCells().length < 2) return;// only checks after second click
   if (checkForLegalMove(this)) {
     console.log('moving player');
     makeMove();
     displayMoves();
-    playerCells.clearCells();
+    CellsDataMethods.clearCells();
     clearHightlightedCells();
   } else { // illegal move
     console.log('illegal move');
-    playerCells.clearCells();
+    CellsDataMethods.clearCells();
     clearHightlightedCells();
   }
 }
 
 cells.forEach((cell) => cell.addEventListener(('click'), boardClickHandler));
 buttons.forEach((button) => button.addEventListener('click', buttonClickHandler));
-const playerCells = cellsData();// playerCells to access cells data array
+const CellsDataMethods = cellsData();// playerCells to access cells data array
